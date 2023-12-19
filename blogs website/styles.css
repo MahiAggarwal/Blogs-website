@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,37,166,1) 0%, rgba(0,212,255,1) 100%);
+
+}
+
+.container{
+    max-width: 75vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+
+}
+
+.headercontainer{
+    margin-bottom: 2.8rem;
+}
+
+.headertitle{
+    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.headerdesc{
+    max-width: 568px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.maincontainer{
+    display: grid;
+    gap:1.5rem;
+    grid-template-columns: repeat(1,1fr);
+}
+
+@media (min-width:724px)
+{
+    .maincontainer{
+    grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (min-width:1315px)
+{
+    .maincontainer{
+    grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (min-width:1340px)
+{
+    .maincontainer{
+    grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.cardcontainer{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cardimagecontainer{
+    position: relative;
+    overflow: hidden;
+    height: 18rem;
+}
+
+.cardimage{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width:100%;
+}
+
+.cardtitlecontainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.cardcontainer:hover .cardimage{
+    transform: scale(1.1);
+    transition-duration: 200ms ;
+}
+
+.cardtitle{
+    font-size: 1rem;
+    font-weight: 600;
+    color: aliceblue;
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.cardtitleanchor:hover .cardtitle{
+    color: red;
+}
+
+.carddesc{
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+}
+
+.cardfootercontainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    align-items: flex-end;
+}
+
+.authorcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+}
+
+.authoravatarcontainer{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(82, 72, 72);
+    border-radius: 50%;
+    background-color: rgb(91, 85, 92);
+}
+
+.authorinfocontainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.authorname{
+    color: white;
+}
+
+.authordate{
+    color: aqua;
+}
+
+.cardtagcontainer{
+    font-size: 1rem;
+    border:1px solid black;
+    border-radius: 2px;
+    line-height: 1.3rem;
+    padding: 0.25rem 0.5rem;
+}
